@@ -13,7 +13,8 @@ def main():
 
     with open('merged.txt', 'w', encoding='utf-8', ) as f:
         for el in info:
-            f.write(el[0] + '\n' + str(el[1]) + '\n' + el[2] + '\n')
+            for line in el:
+                f.write(str(line) + '\n')
 
 
 if __name__ == '__main__':
